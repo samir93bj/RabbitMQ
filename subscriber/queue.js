@@ -15,14 +15,14 @@ async function subscriber() {
     await channel.assertQueue(queue)
 
     channel.consume(queue, (message) => {
-        const content = JSON.parse(message.content.toString())
+      const content = JSON.parse(message.content.toString())
 
-        intensiveOperation()
+      intensiveOperation()
 
-        console.log(`Received message from "${queue}" queue`)
-        console.log(content)
+      console.log(`Received message from "${queue}" queue`)
+      console.log(content)
 
-        channel.ack(message)
+      channel.ack(message)
     })
 }
 
