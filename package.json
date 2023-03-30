@@ -3,7 +3,9 @@
 		"dev-pub": "node publisher/queue.js",
 		"dev-sub": "node subscriber/queue.js",
 		"fanout-pub": "node publisher/fanout.js",
-		"fanout-sub": "node subscriber/fanout.js"
+		"fanout-sub": "node subscriber/fanout.js",
+		"direct-pub": "node publisher/direct.js",
+		"direct-sub": "node subscriber/direct.js"
 	},
   "dependencies": {
     "amqplib": "^0.10.3"
